@@ -5,9 +5,9 @@
 :root {
     --primary: #5A0F1C; 
     --accent: #D4AF37; 
-    --bg-color: #FDFBF7; 
+    --bg-color: #FDF4E3; 
     --text-dark: #2C1810;
-    --text-light: #FDFBF7;
+    --text-light: #FDF4E3;
     --font-heading: 'Cinzel', serif;
     --font-script: 'Great Vibes', cursive;
     --font-body: 'Montserrat', sans-serif;
@@ -61,7 +61,7 @@ body.locked { overflow: hidden; }
 }
 
 /* --- NAVBAR --- */
-.navbar { position: fixed; top: 0; width: 100%; height: var(--nav-height); padding: 0 20px; display: flex; justify-content: space-between; align-items: center; background: rgba(253, 251, 247, 0.95); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid rgba(212, 175, 55, 0.3); }
+.navbar { position: fixed; top: 0; width: 100%; height: var(--nav-height); padding: 0 20px; display: flex; justify-content: space-between; align-items: center; background: rgba(253, 244, 227, 0.95); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid rgba(212, 175, 55, 0.3); }
 .nav-brand { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 5px;}
 .nav-brand span { color: var(--accent); font-family: var(--font-script); font-size: 1.8rem; }
 .mobile-menu-btn { background: none; border: none; font-size: 1.5rem; color: var(--primary); min-height: 44px; min-width: 44px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 1001; }
@@ -136,18 +136,24 @@ body.locked { overflow: hidden; }
 .timeline-dot { position: absolute; left: 20px; transform: translateX(-50%); width: 16px; height: 16px; background: var(--accent); border-radius: 50%; box-shadow: 0 0 8px var(--accent); z-index: 2; border: 3px solid var(--primary); top: 5px; }
 .timeline-content { padding-left: 50px; width: 100%; }
 .timeline-date { display: block; font-family: var(--font-heading); color: var(--accent); font-weight: bold; font-size: 1rem; margin-bottom: 10px; letter-spacing: 1px; text-transform: uppercase; }
-.timeline-card { background: rgba(253, 251, 247, 0.05); border: 1px solid rgba(212, 175, 55, 0.3); padding: 20px; border-radius: 8px; backdrop-filter: blur(5px); }
+.timeline-card { background: rgba(253, 244, 227, 0.05); border: 1px solid rgba(212, 175, 55, 0.3); padding: 20px; border-radius: 8px; backdrop-filter: blur(5px); }
 .timeline-card h3 { color: var(--bg-color); font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 10px; }
 .timeline-card p { font-size: 0.9rem; color: #eee; margin-bottom: 5px; display: flex; align-items: center; gap: 8px; }
 .timeline-card i { color: var(--accent); width: 16px; text-align: center; }
 
 /* --- GALLERY (MASONRY) --- */
-.gallery-section { 
-    background: url('assets/bgpatrait.jpg') center/cover no-repeat;
-    background-attachment: fixed; /* Optional touch for parallax effect, very common in such sites */
+.gallery-section { background: var(--bg-color); }
+.masonry-gallery { 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px; 
+    background-color: #FDF4E3; /* Cream background behind images */
+    padding: 20px; 
+    border-radius: 12px; 
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.02);
 }
-.masonry-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
-.gallery-img { width: 100%; height: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(212, 175, 55, 0.2); }
+.gallery-img { width: 100%; height: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 6px; border: 1px solid rgba(212, 175, 55, 0.2); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
 
 /* --- LIGHTBOX --- */
 .lightbox { display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(20, 10, 5, 0.98); backdrop-filter: blur(5px); overflow: auto; padding-top: var(--nav-height); }
@@ -176,7 +182,7 @@ body.locked { overflow: hidden; }
 /* --- FOOTER --- */
 .footer { background: var(--primary); color: var(--text-light); text-align: center; padding: 40px 15px 20px; }
 .couple-footer-names { font-family: var(--font-script); font-size: clamp(2.5rem, 8vw, 4rem); color: var(--accent); margin: 15px 0; }
-.footer-bottom { margin-top: 30px; padding-top: 15px; border-top: 1px solid rgba(212, 175, 55, 0.2); font-size: 0.75rem; color: rgba(253, 251, 247, 0.6); }
+.footer-bottom { margin-top: 30px; padding-top: 15px; border-top: 1px solid rgba(212, 175, 55, 0.2); font-size: 0.75rem; color: rgba(253, 244, 227, 0.6); }
 
 /* --- SMOOTH REVEAL ANIMATIONS (Optimized for Mobile) --- */
 /* On mobile, prefer fade and slight slide-up over complex transforms */
@@ -218,7 +224,7 @@ body.locked { overflow: hidden; }
     .map-wrapper { height: 450px; border: 4px solid var(--accent); }
     
     /* RSVP scaled styling */
-    .rsvp-card { padding: 30px; background: rgba(255,255,255,0.95); border: 2px solid var(--accent); border-radius: 12px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); margin-top: 10px; }
+    .rsvp-card { padding: 30px; background: rgba(253, 244, 227,0.95); border: 2px solid var(--accent); border-radius: 12px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); margin-top: 10px; }
 }
 
 @media (min-width: 1024px) {
