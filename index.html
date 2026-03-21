@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Aniket & Saloni | The Royal Wedding</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👑</text></svg>">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="locked">
+
+    <!-- Loader Animation -->
+    <div id="loader" class="loader-container">
+        <div class="mandala-spinner"></div>
+        <p class="loading-text">Preparing the Royal Experience...</p>
+    </div>
+
+    <!-- Envelope Opening Overlay -->
+    <div id="envelope-screen" class="envelope-screen hidden">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="envelope-flap"></div>
+                <div class="envelope-letter">
+                    <h2 class="letter-title">A & S</h2>
+                    <p>You are invited</p>
+                </div>
+            </div>
+            <button id="open-invitation" class="gold-btn btn-pulse">Open <i
+                    class="fas fa-envelope-open-text"></i></button>
+        </div>
+    </div>
+
+    <!-- Scroll Flower/Heart Shower Container -->
+    <div id="flower-shower-container"></div>
+
+    <!-- Main Content (Hidden Initially) -->
+    <main id="main-content" class="hidden">
+
+
+        <!-- Navigation Menu -->
+        <nav class="navbar">
+            <div class="nav-brand">A <span>&</span> S</div>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#our-story">Story</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#rsvp">RSVP</a></li>
+            </ul>
+        </nav>
+
+
+
+        <!-- Hero Section with Video -->
+        <section class="hero" id="hero">
+            <video autoplay loop muted playsinline id="hero-video" class="hero-bg-video"
+                poster="assets/hero-poster.jpg">
+                <source src="assets/hero-video.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content reveal">
+                <p class="pre-title">THE ROYAL WEDDING OF</p>
+                <h1 class="couple-names">Aniket <span>&</span> Saloni</h1>
+                <p class="tagline">Together with their families, invite you to celebrate their union</p>
+
+                <div class="countdown-container">
+                    <div class="countdown" id="countdown">
+                        <div class="time-box"><span id="days">00</span>
+                            <p>Days</p>
+                        </div>
+                        <div class="time-box"><span id="hours">00</span>
+                            <p>Hrs</p>
+                        </div>
+                        <div class="time-box"><span id="minutes">00</span>
+                            <p>Min</p>
+                        </div>
+                        <div class="time-box"><span id="seconds">00</span>
+                            <p>Sec</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#our-story" class="scroll-indicator" aria-label="Scroll Down">
+                <div class="mouse"></div>
+                <p>Scroll</p>
+            </a>
+        </section>
+
+        <!-- Our Story / Second Video Section -->
+        <section id="our-story" class="story-video-section reveal mt-section">
+            <div class="container mobile-container">
+                <h2 class="section-title">A Glimpse of Us</h2>
+                <div class="video-wrapper luxury-border-glow">
+                    <video id="story-video" class="landscape-video" autoplay controls playsinline
+                        poster="assets/story-poster.jpg">
+                        <source src="assets/story-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formal Invitation -->
+        <section id="invite" class="invite-section reveal">
+            <div class="container mobile-container">
+                <div class="royal-border">
+                    <img src="assets/ganesha-icon.png" alt="Lord Ganesha" class="ganesha-icon" loading="lazy">
+                    <h2 class="section-title">Join Our Celebration</h2>
+                    <p class="message-text">We joyfully request the pleasure of your company as we tie the knot and
+                        begin our new journey together. Your blessings will make our celebration complete.</p>
+                    <div class="ornament-divider"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Luxury Timeline (Events) -->
+        <section id="events" class="events-section">
+            <div class="container mobile-container">
+                <h2 class="section-title reveal text-gold">The Royal Festivities</h2>
+                <div class="luxury-timeline">
+
+                    <!-- Day 1 -->
+                    <div class="timeline-block reveal-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">April 19</span>
+                            <div class="timeline-card">
+                                <h3>Mata Poojan & Chaak</h3>
+                                <p class="time"><i class="far fa-clock"></i> 10:00 AM</p>
+                                <p class="venue"><i class="fas fa-map-marker-alt"></i> Shiv Villa, Sector D Sudama
+                                    Nagar, Indore</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 2: Mamera -->
+                    <div class="timeline-block reveal-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">April 20</span>
+                            <div class="timeline-card">
+                                <h3>Mamera</h3>
+                                <p class="time"><i class="far fa-clock"></i> 12:00 PM</p>
+                                <p class="venue"><i class="fas fa-map-marker-alt"></i> Vallabha Resort, AB Road Umariya
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 2: Haldi -->
+                    <div class="timeline-block reveal-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">April 20</span>
+                            <div class="timeline-card">
+                                <h3>Haldi Ceremony</h3>
+                                <p class="time"><i class="far fa-clock"></i> 02:00 PM</p>
+                                <p class="venue"><i class="fas fa-map-marker-alt"></i> Vallabha Resort, AB Road Umariya
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 2: Sangeet -->
+                    <div class="timeline-block reveal-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">April 20</span>
+                            <div class="timeline-card">
+                                <h3>Sangeet Ceremony</h3>
+                                <p class="time"><i class="far fa-clock"></i> 07:30 PM</p>
+                                <p class="venue"><i class="fas fa-map-marker-alt"></i> Vallabha Resort, AB Road Umariya
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 3: Wedding -->
+                    <div class="timeline-block reveal-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">April 21</span>
+                            <div class="timeline-card">
+                                <h3>Procession & Shubh Lagan</h3>
+                                <p class="time"><i class="far fa-clock"></i> 11:00 AM</p>
+                                <p class="venue"><i class="fas fa-map-marker-alt"></i> Vallabha Resort, AB Road Umariya
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 3: Reception -->
+                    <div class="timeline-block reveal-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">April 21</span>
+                            <div class="timeline-card">
+                                <h3>Reception Ceremony</h3>
+                                <p class="time"><i class="far fa-clock"></i> 07:30 PM</p>
+                                <p class="venue"><i class="fas fa-map-marker-alt"></i> Vallabha Resort, AB Road Umariya
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery-section">
+            <div class="container mobile-container">
+                <h2 class="section-title reveal">Cherished Moments</h2>
+                <div class="masonry-gallery reveal">
+                    <img src="assets/gallery-1.jpg" loading="lazy" alt="Gallery Photo 1" class="gallery-img reveal-up" style="transition-delay: 0.1s;">
+                    <img src="assets/gallery-2.jpg" loading="lazy" alt="Gallery Photo 2" class="gallery-img reveal-up" style="transition-delay: 0.2s;">
+                    <img src="assets/gallery-3.jpg" loading="lazy" alt="Gallery Photo 3" class="gallery-img reveal-up" style="transition-delay: 0.3s;">
+                    <img src="assets/gallery-4.jpg" loading="lazy" alt="Gallery Photo 4" class="gallery-img reveal-up" style="transition-delay: 0.4s;">
+                    <img src="assets/gallery-5.jpg" loading="lazy" alt="Gallery Photo 5" class="gallery-img reveal-up" style="transition-delay: 0.5s;">
+                    <img src="assets/gallery-6.jpg" loading="lazy" alt="Gallery Photo 6" class="gallery-img reveal-up" style="transition-delay: 0.6s;">
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="lightbox">
+            <span class="close-lightbox" aria-label="Close Lightbox">&times;</span>
+            <img class="lightbox-content" id="lightbox-img" alt="Gallery Zoomed">
+        </div>
+
+        <!-- Location & Map -->
+        <section id="location" class="location-section reveal">
+            <div class="container mobile-container">
+                <h2 class="section-title">The Grand Venues</h2>
+                <div class="map-wrapper luxury-border-glow">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.0294977934076!2d75.82035811496035!3d22.61582268516089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fc62a433f52b%3A0x868c6ebf2ebafbed!2sVallabha%20Resort!5e0!3m2!1sen!2sin!4v1683050000000!5m2!1sen!2sin"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="map-action-container">
+                    <a href="https://maps.google.com/?q=Vallabha+Resort+Indore" target="_blank"
+                        class="gold-btn btn-responsive"><i class="fas fa-directions"></i> Open Map</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- RSVP Section Simplified -->
+        <section id="rsvp" class="rsvp-section reveal">
+            <div class="container mobile-container" style="padding-top: 10px; padding-bottom: 20px;">
+                <div class="rsvp-card royal-border">
+                    <h2 class="section-title" style="margin-bottom: 15px;">RSVP</h2>
+                    <div class="family-regards">
+                        <p class="regards-title font-script gold-text">Warm Regards</p>
+                        <p class="regards-names">Krishna Kant & Deepti Dhanotia</p>
+                        <p class="regards-firm">M/S Aniket HP Gas Enterprises</p>
+                        <img src="assets/regards-image.jpg" loading="lazy" alt="Regards Landscape" class="regards-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container mobile-container">
+                <div class="ornament-divider"></div>
+                <h2 class="couple-footer-names">Aniket & Saloni</h2>
+                <p>We look forward to celebrating with you ❤️</p>
+                <div class="footer-bottom">
+                    <p>Designed with love for the Royal Union</p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
