@@ -177,7 +177,10 @@ body.locked { overflow: hidden; }
 /* --- FOOTER --- */
 .footer { background: var(--primary); color: var(--text-light); text-align: center; padding: 40px 15px 20px; }
 .couple-footer-names { font-family: var(--font-script); font-size: clamp(2.5rem, 8vw, 4rem); color: var(--accent); margin: 15px 0; }
-.footer-bottom { margin-top: 30px; padding-top: 15px; border-top: 1px solid rgba(212, 175, 55, 0.2); font-size: 0.75rem; color: rgba(253, 244, 227, 0.6); }
+.footer-bottom { margin-top: 30px; padding-top: 15px; border-top: 1px solid rgba(212, 175, 55, 0.2); font-size: 0.75rem; color: rgba(253, 244, 227, 0.6); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+.designed-by { margin-left: auto; }
+.designed-by a { color: var(--accent); text-decoration: underline; transition: color 0.3s ease, text-decoration-color 0.3s ease; }
+.designed-by a:hover { color: #fff; text-decoration-color: var(--accent); }
 
 /* --- SMOOTH REVEAL ANIMATIONS (Optimized for Mobile) --- */
 /* On mobile, prefer fade and slight slide-up over complex transforms */
